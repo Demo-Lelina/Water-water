@@ -8,7 +8,7 @@ public class Lever : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Rigidbody2D rb=collision.gameObject.GetComponent<Rigidbody2D>();
-        if(rb.velocity.x<0f)
+        if(rb.linearVelocity.x<0f)
             MoveLift = true;
         else
         {

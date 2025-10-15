@@ -34,7 +34,7 @@ public class PlayerBlue : MonoBehaviour
         {
            // Debug.Log(rb.velocity.magnitude);
           //  if (rb.velocity.magnitude < 3f)
-                rb.velocity = Vector3.Lerp(rb.velocity, new Vector2(-4f, rb.velocity.y), 0.08f);
+                rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, new Vector2(-4f, rb.linearVelocity.y), 0.08f);
             // rb.AddForce(-Vector2.right * 7f);
             //rb.velocity = new Vector2(-2f, rb.velocity.y);
             //transform.position = new Vector3(transform.position.x - 0.1f, transform.position.y, transform.position.z);
@@ -42,11 +42,11 @@ public class PlayerBlue : MonoBehaviour
         else if (Input.GetKey(KeyCode.RightArrow))
         {
            
-             rb.velocity = Vector3.Lerp(rb.velocity, new Vector2(4f, rb.velocity.y), 0.08f);
+             rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, new Vector2(4f, rb.linearVelocity.y), 0.08f);
             // transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
         }
         else
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
