@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Water : MonoBehaviour
 {
-    public GameObject gameOverScreen; // 🖼 อ้างอิง GameOverImage ที่เราสร้าง
+    public GameObject gameOverScreen; //  อ้างอิง GameOverImage ที่เราสร้าง
 
     private bool isDead = false;
 
